@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Időjárás app</title>
+        <link rel="icon" href="/img/weather.png">
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <div class="main-content">
+        {{>header}}
+             <form>
+                 <input placeholder='Település' id='field'>
+                 <button type="submit">
+                     Keresés
+                 </button>
+            </form>
+            
+            <div>
+            <p id="m-1"></p>
+            <p id="m-2"></p>
+            <p id="m-3"></p>
+            <p id="m-4"></p>
+            <p id="m-5"></p>
+            <p id="m-6"></p>
+            </div>
+          
+
+        </div>
+          <div class="box">
+
+        </div>
+        <div class="box2">
+
+        </div>
+        {{>footer}}
+        <script src="/js/app.js"></script>
+    </body>
+
+</html>

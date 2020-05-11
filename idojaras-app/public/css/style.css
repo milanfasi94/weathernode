@@ -1,0 +1,53 @@
+body{
+    color: white;
+    font-family:fantasy;
+    max-width:500px;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background:linear-gradient(rgb(47,150,163),rgb(48,62,143));
+}
+header{
+    margin-top:16px;
+    margin-bottom: 48px;
+}
+h1{
+    font-size: 64px;
+    margin-bottom:16px;
+}
+header a{
+    color: white;
+    margin-right: 16px;
+    text-decoration: none;
+}
+.portrait{
+    width:80%;
+}
+input{
+    border: 1px solid white;
+    border-radius: 5%;
+    padding: 12px;
+}
+button {
+    cursor: pointer;
+    border: 1px solid #888888;
+    background:white;
+    padding: 12px;
+    border-radius:5px;
+}
+#kep-1{
+    padding-bottom: 220px;
+    width:70%;
+}
+.lnik{
+    text-decoration:wavy;
+    color:whitesmoke;
+    font-style:italic;
+    font-size:20px;
+}
+.main-content{
+    flex-grow:1;
+}
