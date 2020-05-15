@@ -1,40 +1,63 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>Időjárás app</title>
-        <link rel="icon" href="/img/weather.png">
-        <link rel="stylesheet" href="/css/style.css">
-    </head>
-    <body>
-        <div class="main-content">
-        {{>header}}
-             <form>
-                 <input placeholder='Település' id='field'>
-                 <button type="submit">
-                     Keresés
-                 </button>
-            </form>
-            
-            <div>
+
+<header>
+    <title>Időjárás app</title>
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    {{>header}}
+</header>
+
+<body>
+    <div class="panel-default">
+    <div class="container" style="text-align:center;">
+        <div class="row" style="margin-bottom:20px">
+            <div class="col-m">
+                <form>
+                    <input placeholder='Település' id='field' class="form-control">
+            </div>
+            <div class="col-m" style="margin-left:10px">
+                <button type="submit" class="btn btn-light" id="sub">
+                    Keresés
+                </button>
+                <button type="button" class="btn btn-light" onclick="jgypk()">
+                    JGYPK
+                </button>
+                <button type="reset" class="btn btn-light" onclick="deletef()">
+                    Törlés
+                </button>
+            </div>
+        </div>
+        </form>
+        <div class="row" style="color:white;font-size:20px">
             <p id="m-1"></p>
             <p id="m-2"></p>
             <p id="m-3"></p>
             <p id="m-4"></p>
             <p id="m-5"></p>
             <p id="m-6"></p>
-            </div>
-          
-
         </div>
-          <div class="box">
-
-        </div>
-        <div class="box2">
-
-        </div>
+    </div>
+</body>
+    <footer>
         {{>footer}}
-        <script src="/js/app.js"></script>
-    </body>
-
+    </footer>
+    <script src="/js/app.js"></script>
+    <script>
+        function jgypk(){
+        document.getElementById("field").value="SZTE Juhász Gyula Pedagógusképző Kar";
+        if(document.getElementById("field").value==="SZTE Juhász Gyula Pedagógusképző Kar"){
+             document.getElementById("sub").click();
+        }
+        }
+        function deletef(){
+            for(var i=1;i<7;i++){
+             document.getElementById("m-"+i).innerText="";
+             document.getElementById("m-1").innerText="Írjon be egy települést a keresőbe"
+            }
+        }
+    </script>
 </html>

@@ -6,7 +6,7 @@ const forecast = (lat,long,callback)=>{
         if(error){
             callback('Hiba történt a csatlakozáskor',undefined)
         }else if(body.message){
-            callback('Nem találja az alábbi területet',undefined)
+            callback('Hiba történt a lekérdezéskor. Van internet elérése?',undefined)
         }else{
             callback(undefined,body)
         }
